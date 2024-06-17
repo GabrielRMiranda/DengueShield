@@ -94,6 +94,20 @@ public interface Util {
         }
     }
 
+    public static Connection getConnection(){
+        String url = "jdbc:sqlite:C:/Users/lgvip/DataGripProjects/CRUD/identifier.sqlite";
+        Connection conexao = null;
+
+        try{
+            Class.forName("org.sqlite.JDBC");
+            conexao = DriverManager.getConnection(url);
+        } catch (ClassNotFoundException e) {
+            System.out.println("Driver SQLITE JDBC não encontrado." + e.getMessage());
+        } catch (SQLException e) {
+            System.out.println("Erro ao conectar com o banco de dados." + e.getErrorCode() +":"+e.getMessage());
+        }
+        return conexao;
+    }
 
 
 }
