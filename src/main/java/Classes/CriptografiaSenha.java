@@ -20,4 +20,10 @@ public class CriptografiaSenha {
         byte[] bytes = md.digest(senha.getBytes());
         return Base64.getEncoder().encodeToString(bytes);
     }
+
+    public static boolean validarSenha(String senha, String hash, String salt) throws NoSuchAlgorithmException {
+        String hashGerado = gerarHash(senha, salt);
+        return hashGerado.equals(hash);
+    }
+
 }

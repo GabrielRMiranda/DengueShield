@@ -1,24 +1,14 @@
 package Validadores;
 
+import Classes.CriptografiaSenha;
 import Classes.Usuario;
+import Global.Util;
 
-import java.sql.SQLOutput;
+import java.security.NoSuchAlgorithmException;
+import java.sql.*;
 
 public class UsuarioLogin {
 
-    private static Usuario usuarioLogado;
-
-    public static Usuario getUsuarioLogado() {
-        System.out.println("getado");
-        return usuarioLogado;
-    }
-
     public static void setUsuarioLogado(Usuario usuarioLogin) {
-        UsuarioLogin.usuarioLogado = usuarioLogin;
-        System.out.println("Bem vindo");
-    }
-
-    public static void logout(){
-        usuarioLogado = null;
     }
 }

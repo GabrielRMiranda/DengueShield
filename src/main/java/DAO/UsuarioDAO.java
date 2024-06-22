@@ -38,10 +38,6 @@ public class UsuarioDAO {
         }
     }
 
-    public static void consultaUsuarios(){
-        Util.consultaTabela("Usuario");
-    }
-
     public static List<Usuario> listaUsuarios() {
         List<Usuario> usuarios = new ArrayList<>();
         String sql = "SELECT * FROM Usuario WHERE tipoCadastroid = ?";
@@ -73,6 +69,8 @@ public class UsuarioDAO {
 
         return usuarios;
     }
+
+
 
 
     public static void inativarCadastro(Usuario usuario){
