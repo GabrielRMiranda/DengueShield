@@ -37,6 +37,14 @@ public class Login {
     }
 
     public static void realizaLogin(String email, String senha) throws NoSuchAlgorithmException {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Email: ");
+        String email = scanner.nextLine();
+
+        System.out.print("Senha: ");
+        String senha = scanner.nextLine();
+
         if(validaLogin(email,senha)){
             System.out.println("Login bem sucedido!");
         } else {
